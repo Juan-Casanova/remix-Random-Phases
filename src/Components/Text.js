@@ -5,11 +5,11 @@ const Text = (props) => {
     //window.onload = props.funChangeColor()
 
     return (
-        <div>
-            <p>
+        <div id="containerText">
+            <p id="textPhase">
                {props.phase}
             </p>
-            <p>
+            <p id="textAuth">
                 {props.auth}
             </p>            
         </div>

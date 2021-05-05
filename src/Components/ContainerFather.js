@@ -12,15 +12,13 @@ const ContainerFather = () => {
   
 
     const [color, setColor] = useState('#000000')
+    const [phase, setPhase] = useState(Data.quotes[1].quote);
+    const [auth, setAuth] = useState (Data.quotes[1].author)
 
     const generateHex = () => {
         var numberRandom = Math.floor(Math.random()*6)
         setColor(colorsHex[numberRandom])
     }
-
-
-    const [phase, setPhase] = useState(Data.quotes[1].quote);
-    const [auth, setAuth] = useState (Data.quotes[1].author)
     
     const changePhrase = () => {
         
@@ -32,6 +30,10 @@ const ContainerFather = () => {
         setPhase(phase1)
         setAuth(auth1)
     
+    }
+
+    const changeColor = () => {
+
     }
 
     return (
