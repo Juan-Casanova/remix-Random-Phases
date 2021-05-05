@@ -9,7 +9,7 @@ import Data from '../quotes.json'
 const ContainerFather = () => {
 
     var colorsHex = ["#FF0000","#00FF00","#0000FF","#7737ea","#fd37ea","#2af1db"]
-  
+    var classBack = document.getElementById("App");
 
     const [color, setColor] = useState('#000000')
     const [phase, setPhase] = useState(Data.quotes[1].quote);
@@ -21,6 +21,8 @@ const ContainerFather = () => {
     }
     
     const changePhrase = () => {
+
+        changeColor()
         
         var numberRandom = Math.floor(Math.random() * 102);
 
@@ -33,13 +35,14 @@ const ContainerFather = () => {
     }
 
     const changeColor = () => {
-
+        generateHex()
+        classBack.setAttribute("style",`background-color:${color}`)
     }
 
     return (
         <div id="container-Father">
-            <Text phase={phase} auth = {auth} funChangeColor = {changePhrase} />
-            <Button fun={changePhrase} />
+            <Text phase={phase} auth = {auth}/>
+            <Button fun={changePhrase} phase={phase} auth = {auth}/>
         </div>
     )
 }
