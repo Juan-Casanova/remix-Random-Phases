@@ -6,7 +6,7 @@ const Button = (props) => {
 
     return(
         <div id="containerButton">
-            <a href = {url} target="_blank">
+            <a href = {url}>
                 <img id="icon" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" alt="fallando papu"/>
             </a>
             <button class="buttonStyle" onClick ={ () => props.fun() }> 
